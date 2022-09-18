@@ -1,0 +1,19 @@
+
+body {
+    background-color: aqua;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    user-select: none;
+}
+
+.image {
+    max-width: 100vw;
+    height: 600px;
+
+    background-image: url(/src/images/background.jpg);
+}
+@media (min-resolution: 2dppx) {
+    .image {
+        background-image: url(/src/images/background@2x.jpg);
+    }
+}
