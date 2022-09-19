@@ -8,11 +8,34 @@
   </head>
   <body>
     <form action="">
-      <input type="text" />
-      <input type="text" />
+      <input class="new-item-description" type="text" />
+      <select class="new-item-priority" name="priority" id="">
+        <option value="high">high</option>
+        <option value="medium">medium</option>
+        <option value="low">low</option>
+      </select>
+      <input class="new-item-deadline" type="date" />
+      <button class="new-item-create" type="submit">Create</button>
     </form>
     <div class="todo-list">
-      <div class="todo-item"></div>
+      <div class="todo-item">
+        <div class="todo-item-top">
+          <span class="id">id</span>
+          <span class="deadline">Deadline</span>
+        </div>
+        <div class="todo-item-description">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Repudiandae praesentium corrupti mollitia. Quaerat, nobis numquam at
+            expedita soluta quod consequatur maiores excepturi ipsa id sit ab,
+            harum corporis laudantium obcaecati.
+          </p>
+        </div>
+        <div class="todo-item-bottom">
+          <button type="button">Done</button>
+          <button type="button">Remove</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
