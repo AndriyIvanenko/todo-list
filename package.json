@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://AndriyIvanenko.github.io/webpack-build",
   "scripts": {
     "start": "webpack server --mode=development",
     "dev": "webpack --mode=development",
     "prod": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndriyIvanenko/webpack-build.git"
   },
   "keywords": [],
   "author": "",
