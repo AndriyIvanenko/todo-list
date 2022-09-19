@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://AndriyIvanenko.github.io/webpack-build",
+  "homepage": "https://AndriyIvanenko.github.io/todo-list",
   "scripts": {
     "start": "webpack server --mode=development",
     "dev": "webpack --mode=development",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AndriyIvanenko/webpack-build.git"
+    "url": "git+https://github.com/AndriyIvanenko/todo-list.git"
   },
   "keywords": [],
   "author": "",
