@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
+  <script defer src="main.ea4804892b4a4b04283a.js"></script><link href="main.cddac1aea1221074f607.css" rel="stylesheet"></head>
+  <body>
+    <form>
+      <h3 class="form-title">Create new task</h3>
+      <div class="mb-3">
+        <label class="form-label" for="title">Task title</label>
+        <input class="form-control" id="title" type="text" />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="description">Task description</label>
+        <textarea class="form-control" id="description" rows="3"></textarea>
+      </div>
+
+      <div class="row g-3">
+        <div class="mb-3 col">
+          <label class="form-label" for="priority">Priority</label>
+          <select class="form-select priority" id="priority" name="priority">
+            <option value="high">high</option>
+            <option value="medium">medium</option>
+            <option value="low">low</option>
+          </select>
+        </div>
+
+        <div class="mb-3 col aaa">
+          <label class="form-label deadline-label right">Deadline</label>
+          <input class="form-control deadline right" type="date" />
+        </div>
+      </div>
+
+      <button class="btn btn-primary submit" type="submit">Create</button>
+    </form>
+
+    <div class="todo-list">
+      <div class="todo-item">
+        <div class="todo-item-top">
+          <span class="task-id">Task id</span>
+          <span class="task-deadline">Task deadline</span>
+        </div>
+        <div class="todo-item-description">
+          <h3 class="todo-item-title">Task title</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Repudiandae praesentium corrupti mollitia. Quaerat, nobis numquam at
+            expedita soluta quod consequatur maiores excepturi ipsa id sit ab,
+            harum corporis laudantium obcaecati.
+          </p>
+        </div>
+        <div class="todo-item-bottom">
+          <button class="btn btn-success" type="button">Done</button>
+          <button class="btn btn-danger" type="button">Remove</button>
+        </div>
+      </div>
+      <div class="todo-item">
+        <div class="todo-item-top">
+          <span class="task-id">Task id</span>
+          <span class="task-deadline">Task deadline</span>
+        </div>
+        <div class="todo-item-description">
+          <h3 class="todo-item-title">Task title</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Repudiandae praesentium corrupti mollitia. Quaerat, nobis numquam at
+            expedita soluta quod consequatur maiores excepturi ipsa id sit ab,
+            harum corporis laudantium obcaecati.
+          </p>
+        </div>
+        <div class="todo-item-bottom">
+          <button class="btn btn-success" type="button">Done</button>
+          <button class="btn btn-danger" type="button">Remove</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

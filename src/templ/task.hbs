@@ -1,0 +1,14 @@
+<div class="todo-item" id="task-{{ id }}">
+  <div class="todo-item-top">
+      <span class="task-id">#{{ id }}</span>
+      <span class="task-deadline" id="deadline">Deadline: {{ deadline }}</span>
+  </div>
+  <div class="todo-item-description">
+    <h3 class="todo-item-title">{{ title }}</h3>
+    <p>{{ description }}</p>
+  </div>
+  <div class="todo-item-bottom">
+    <button class="btn btn-success" type="button">Done</button>
+    <button class="btn btn-danger" type="button" data-task-id="task-{{ id }}">Remove</button>
+  </div>
+</div>
