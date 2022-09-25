@@ -11,7 +11,25 @@
     />
   </head>
   <body>
-    <form>
+    <h1 class="page-title">ToDo List</h1>
+    <form class="get-tasks">
+      <h3 class="form-title">Get tasks</h3>
+
+      <div class="row g-3">
+        <div class="mb-3 col tasks-per-page">
+          <label class="form-label" for="tasks-per-page">Tasks per page</label>
+          <input class="form-control" id="tasks-per-page" type="number" />
+        </div>
+
+        <div class="mb-3 col">
+          <button class="btn btn-primary submit btn-get-tasks" type="submit">
+            Get tasks
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <form class="create-task">
       <h3 class="form-title">Create new task</h3>
       <div class="mb-3">
         <label class="form-label" for="title">Task title</label>
@@ -33,7 +51,7 @@
           </select>
         </div>
 
-        <div class="mb-3 col aaa">
+        <div class="mb-3 col">
           <label class="form-label deadline-label right" for="deadline"
             >Deadline</label
           >

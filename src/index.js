@@ -1,22 +1,49 @@
 import "./index.html";
 import "./scss/main.scss";
-import tasks from "./js/tasks-list";
+import getTasks from "./js/getTasks";
 import taskMarkup from "./js/tasks-markup";
 import addNewTask from "./js/add-new-task";
 import removeTask from "./js/remove-task";
+import Notiflix from "notiflix";
 
-tasks.forEach((task) => taskMarkup(task));
-addNewTask(tasks, taskMarkup);
-removeTask();
+let tasks;
+let totalTasks;
+let pageNumber = 1;
+let tasksPerPage = 1;
+let offset = 0;
 
-// const todoList = document.querySelector(".todo-list");
-// todoList.addEventListener("click", onRemoveClick);
-// function onRemoveClick(event) {
-//   console.log(event.target.classList.value);
-//   console.log(event.target.dataset.taskId);
-//   if (event.target.classList.value === "btn btn-danger") {
-//     const todoItem = document.querySelector(`#${event.target.dataset.taskId}`);
-//     console.log(todoItem);
-//     todoItem.remove();
-//   }
-// }
+const getTasksForm = document.querySelector(".get-tasks");
+getTasksForm.addEventListener("click", onGetTasksClick);
+function onGetTasksClick(event) {
+  event.preventDefault();
+
+  if (event.target.classList.contains("btn-get-tasks")) {
+    const tasksPerPageInput = document.querySelector("#tasks-per-page");
+    tasksPerPage = tasksPerPageInput.value;
+
+    getTasks(offset, tasksPerPage)
+      .then((response) => {
+        tasks = response.data;
+        totalTasks = response.total;
+        tasks.forEach((task) => taskMarkup(task));
+        Notiflix.Notify.success(`Getting ${tasks.length} tasks successful!`);
+      })
+      .catch(() => {
+        Notiflix.Notify.failure("Ups! Something went wrong");
+      });
+  }
+}
+
+const createNewTaskForm = document.querySelector("form");
+createNewTaskForm.addEventListener("submit", newTaskSubmit);
+function newTaskSubmit(event) {
+  event.preventDefault();
+  addNewTask(tasks, taskMarkup);
+  createNewTaskForm.reset();
+}
+
+const todoList = document.querySelector(".todo-list");
+todoList.addEventListener("click", onRemoveClick);
+function onRemoveClick(event) {
+  removeTask(event, tasks);
+}
